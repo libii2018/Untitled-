@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <div className="px-4 lg:px-20 lg:pt-16 lg:pb-12 lg:items-center">
-      <div className="grid grid-cols-2 gap-8 my-12 lg:grid-cols-6">
+      <div className="grid grid-cols-2 items-center gap-8 my-12 lg:grid-cols-6 sm:grid-cols-3">
         <div>
           <h2 className="font-semibold text-sm mb-4 text-[#98A2B3]">Product</h2>
           <div className="flex flex-col items-start">

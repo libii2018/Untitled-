@@ -8,9 +8,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Accordion from "./../components/Accordion";
 
 import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ChevronDownIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -32,9 +38,9 @@ export default function Home() {
               />
             </Button>
           </div>
-          <p className="p-4 text-4xl font-semibold leading-[44px] lg:leading-[72px] text-[#101828] lg:text-6xl lg:mb-6">
+          <h1 className="p-4 text-4xl font-semibold leading-[44px] lg:leading-[72px] text-[#101828] lg:text-6xl lg:mb-6">
             Beautiful analytics to grow smarter
-          </p>
+          </h1>
           <p className="mb-8 text-lg font-normal leading-7 text-[#475467] lg:text-xl lg:w-[768px] lg:h-[60px]">
             Powerful, self-serve product and growth analytics to help you
             convert, engage, and retain more users. Trusted by over 4,000
@@ -79,11 +85,10 @@ export default function Home() {
               className="mr-[3.67px] hidden lg:block"
               src="/img/MacbookPro16mockup-lg.png"
               width={1216}
-              height={710.13}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              height={480}
               style={{
                 width: "1216px",
-                height: "710.13px",
+                height: "480px",
               }}
               alt="Picture of the iconright"
             />
@@ -173,7 +178,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        {/* Analytics that feels like it’s from the future */}
         <section className="py-16">
           <div className="mt-12 text-center mb-12 lg:flex lg:flex-col lg:items-center lg:mb-16">
             <p className="font-normal	text-sm leading-5 mb-3 text-[#6941C6] lg:font-semibold lg:text-base">
@@ -188,8 +193,8 @@ export default function Home() {
               startups.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-10 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-            <Card className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center lg:grid lg:grid-cols-3 lg:gap-16 lg:content-between">
+            <Card className="flex flex-col items-center text-center w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
               <CardHeader className="lg:mb-8">
                 <Image
                   className="lg:hidden"
@@ -209,12 +214,12 @@ export default function Home() {
               <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:text-xl lg:mb-2">
                 Share team inboxes
               </CardTitle>
-              <CardContent className="font-normal	text-base leading-6 text-[#475467] lg:text-base">
+              <CardContent className="font-normal	text-base leading-6 text-[#475467] p-0 lg:text-base">
                 Whether you have a team of 2 or 200, our shared team inboxes
                 keep everyone on the same page and in the loop.
               </CardContent>
             </Card>
-            <Card className="flex flex-col items-center text-center">
+            <Card className="flex flex-col items-center text-center w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
               <CardHeader className="lg:mb-8">
                 <Image
                   className="lg:hidden"
@@ -234,12 +239,12 @@ export default function Home() {
               <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:text-xl lg:mb-2">
                 Deliver instant answers
               </CardTitle>
-              <CardContent className="font-normal	text-base leading-6 text-[#475467] lg:text-base">
+              <CardContent className="font-normal	text-base leading-6 text-[#475467] p-0 lg:text-base">
                 An all-in-one customer service platform that helps you balance
                 everything your customers need to be happy.
               </CardContent>
             </Card>
-            <Card className="flex flex-col items-center text-center">
+            <Card className="flex flex-col items-center text-center w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
               <CardHeader className="lg:mb-8">
                 <Image
                   className="lg:hidden"
@@ -259,13 +264,13 @@ export default function Home() {
               <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:text-xl lg:mb-2">
                 Manage your team with reports
               </CardTitle>
-              <CardContent className="font-normal	text-base leading-6 text-[#475467] lg:text-base">
+              <CardContent className="font-normal	text-base leading-6 text-[#475467] p-0 lg:text-base">
                 Measure what matters with Untitled’s easy-to-use reports. You
                 can filter, export, and drilldown on the data in a couple
                 clicks.
               </CardContent>
             </Card>
-            <Card className="flex flex-col items-center text-center">
+            <Card className="flex flex-col items-center text-center w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
               <CardHeader className="lg:mb-8">
                 <Image
                   className="lg:hidden"
@@ -285,13 +290,13 @@ export default function Home() {
               <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:text-xl lg:mb-2">
                 Connect with customers
               </CardTitle>
-              <CardContent className="font-normal	text-base leading-6 text-[#475467] lg:text-base">
+              <CardContent className="font-normal	text-base leading-6 text-[#475467] p-0 lg:text-base">
                 Solve a problem or close a sale in real-time with chat. If no
                 one is available, customers are seamlessly routed to email
                 without confusion.
               </CardContent>
             </Card>
-            <Card className="flex flex-col items-center text-center">
+            <Card className="flex flex-col items-center text-center w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
               <CardHeader className="lg:mb-8">
                 <Image
                   className="lg:hidden"
@@ -311,13 +316,13 @@ export default function Home() {
               <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:text-xl lg:mb-2">
                 Connect the tools you already use
               </CardTitle>
-              <CardContent className="font-normal	text-base leading-6 text-[#475467] lg:text-base">
+              <CardContent className="font-normal	text-base leading-6 text-[#475467] p-0 lg:text-base">
                 Explore 100+ integrations that make your day-to-day workflow
                 more efficient and familiar. Plus, our extensive developer
                 tools.
               </CardContent>
             </Card>
-            <Card className="flex flex-col items-center text-center">
+            <Card className="flex flex-col items-center text-center w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
               <CardHeader className="lg:mb-8">
                 <Image
                   className="lg:hidden"
@@ -337,7 +342,7 @@ export default function Home() {
               <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:text-xl lg:mb-2">
                 Our people make the difference
               </CardTitle>
-              <CardContent className="font-normal	text-base leading-6 text-[#475467] lg:text-base">
+              <CardContent className="font-normal	text-base leading-6 text-[#475467] p-0 lg:text-base">
                 We’re an extension of your customer service team, and all of our
                 resources are free. Chat to our friendly team 24/7 when you need
                 help.
@@ -368,7 +373,7 @@ export default function Home() {
             Product Manager, Sisyphus
           </p>
         </section>
-
+        {/* Cutting-edge features for advanced analytics */}
         <section className="py-16 mt-12 text-center">
           <div className="text-center mb-12 lg:mb-16 lg:flex lg:flex-col lg:items-center">
             <p className="font-normal	text-sm leading-5 mb-3 text-[#6941C6] lg:font-medium lg:mb-4 ">
@@ -387,10 +392,10 @@ export default function Home() {
             <Image
               className="mr-[3.67px] lg:hidden"
               src="/img/iPhone12Promockup.jpg"
-              width={284}
+              width={350}
               height={360}
               style={{
-                width: "284px",
+                width: "350px",
                 height: "360px",
               }}
               alt="Picture of the iconright"
@@ -412,8 +417,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col items-center lg:grid lg:grid-cols-3 lg:gap-8">
-          <Card className="flex flex-col items-center text-center mb-7">
+        <section className="flex flex-col items-center lg:grid lg:grid-cols-3 lg:gap-16 lg:content-between">
+          <Card className="flex flex-col items-center text-center mb-7 w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
             <CardHeader>
               <Image
                 src="/img/mail.svg"
@@ -425,7 +430,7 @@ export default function Home() {
             <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:font-semibold lg:text-xl lg:leading-[30px]">
               Share team inboxes
             </CardTitle>
-            <CardContent className="font-normal	text-base leading-6 text-[#475467]">
+            <CardContent className="font-normal	text-base leading-6 p-0 text-[#475467]">
               Whether you have a team of 2 or 200, our shared team inboxes keep
               everyone on the same page and in the loop.
             </CardContent>
@@ -442,7 +447,7 @@ export default function Home() {
               </Button>
             </CardFooter>
           </Card>
-          <Card className="flex flex-col items-center text-center mb-7">
+          <Card className="flex flex-col items-center text-center mb-7 w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
             <CardHeader>
               <Image
                 src="/img/zap.svg"
@@ -454,7 +459,7 @@ export default function Home() {
             <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:font-semibold lg:text-xl lg:leading-[30px]">
               Deliver instant answers
             </CardTitle>
-            <CardContent className="font-normal	text-base leading-6 text-[#475467]">
+            <CardContent className="font-normal	text-base leading-6 p-0 text-[#475467]">
               An all-in-one customer service platform that helps you balance
               everything your customers need to be happy.
             </CardContent>
@@ -471,7 +476,7 @@ export default function Home() {
               </Button>
             </CardFooter>
           </Card>
-          <Card className="flex flex-col items-center text-center mb-7">
+          <Card className="flex flex-col items-center text-center mb-7 w-[343px] h-[160px] lg:w-[384px] lg:h-[178px]">
             <CardHeader>
               <Image
                 src="/img/bar-chart-2.svg"
@@ -483,7 +488,7 @@ export default function Home() {
             <CardTitle className="font-medium text-lg leading-7 text-[#101828] mb-1 lg:font-semibold lg:text-xl lg:leading-[30px]">
               Manage your team with reports
             </CardTitle>
-            <CardContent className="font-normal	text-base leading-6 text-[#475467]">
+            <CardContent className="font-normal	text-base leading-6 p-0 text-[#475467]">
               Measure what matters with Untitled’s easy-to-use reports. You can
               filter, export, and drilldown on the data in a couple clicks.
             </CardContent>
@@ -511,8 +516,42 @@ export default function Home() {
               Everything you need to know about the product and billing.
             </p>
           </div>
-          <div className="text-left lg:max-w-[768px]">
-            <Accordion
+          <div className="text-left lg:w-[768px]">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="AccordionTrigger">
+                  Is there a free trial available?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Yes, you can try us for free for 30 days. If you want, we’ll
+                  provide you with a free, personalized 30-minute onboarding
+                  call to get you up and running as soon as possible.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Can I change my plan later?</AccordionTrigger>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>
+                  What is your cancellation policy?
+                </AccordionTrigger>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger>
+                  Can other info be added to an invoice?
+                </AccordionTrigger>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>How does billing work?</AccordionTrigger>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>
+                  How do I change my account email?
+                </AccordionTrigger>
+              </AccordionItem>
+            </Accordion>
+            {/* <Accordion
               title="Is there a free trial available?"
               content="Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."
             />
@@ -523,7 +562,7 @@ export default function Home() {
               content=""
             />
             <Accordion title="How does billing work?" content="" />
-            <Accordion title="How do I change my account email?" content="" />
+            <Accordion title="How do I change my account email?" content="" /> */}
           </div>
         </section>
 
@@ -576,8 +615,8 @@ export default function Home() {
               the data you need to launch and grow your business faster.
             </p>
           </div>
-          <div className="lg:grid lg:grid-cols-2">
-            <div className="flex flex-col gap-8 lg:grid lg:px-8 lg:py-20  lg:grid-cols-2 lg:gap-4 lg:gap-x-8 lg:gap-y-16">
+          <div className="flex flex-col items-center lg:grid lg:grid-cols-2">
+            <div className="flex flex-col gap-8 items-center lg:grid lg:px-8 lg:py-20  lg:grid-cols-2 lg:gap-4 lg:gap-x-8 lg:gap-y-16">
               <Card className="mb-8 text-center lg:mb-0 w-[264px] h-[168px]">
                 <CardHeader className="font-semibold text-5xl text-[#6941C6] tracking-[-2%] mb-3 p-0 mt-0 ml-0 mr-0">
                   4,000+
@@ -647,7 +686,7 @@ export default function Home() {
           <p className="mb-8 text-lg font-normal leading-7 text-[#475467]">
             Join over 4,000+ startups already growing with Untitled.
           </p>
-          <div className="flex flex-row-reverse items-center justify-center gap-3">
+          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-center gap-3">
             <Button
               variant={"customPrimary"}
               size={"customPrimary"}
